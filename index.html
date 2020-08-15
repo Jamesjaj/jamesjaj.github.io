@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My first website Hello World !</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <button class="btn btn-primary">Default</button>
+  <header>
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section>
+    <iframe width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+</iframe>
+  </section>
+  <section>
+    <h2>Home</h2>
+    <p style="background-color:Tomato;"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <hr>
+    <div id ="div1"> 
+      <p class = "webtext active"> Lorem ipsum.</p>
+      <p class = "webtext"> Lorem ipsum.</p>
+      <p class = "webtext"> Lorem ipsum.</p>
+    </div>
+  </section>
+  <section>
+    <p>Styled Font Awesome icons (size and color):</p>
+<i class="fas fa-cloud" style="font-size:24px;"></i>
+<i class="fas fa-cloud" style="font-size:36px;"></i>
+<i class="fas fa-cloud" style="font-size:48px;color:red;"></i>
+<i class="fas fa-cloud" style="font-size:60px;color:lightblue;"></i>
+  </section>
+  <hr>
+    <div id ="div2"> 
+      <p class = "webtext"> Lorem ipsum.</p>
+      <p class = "webtext"> Lorem ipsum.</p>
+      <p class = "webtext"> Lorem ipsum.</p>
+    </div>
+  <section>
+    <p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+
+  </section>
+</body>
+</html>
